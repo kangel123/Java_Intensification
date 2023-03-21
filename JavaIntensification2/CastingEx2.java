@@ -18,6 +18,8 @@ public class CastingEx2 {
 		kopo09_b = -2;	//Change the value of kopo09_b to -2
 		kopo09_i = (int)kopo09_b;	// type casting(byte to integer)
 		System.out.printf("[byte -> int] b=%d -> i=%d%n",kopo09_b,kopo09_i);	// Print result
+		
+		System.out.println("i="+Integer.toBinaryString(kopo09_i));	// Output in 2's complement form
 	}
 
 }
