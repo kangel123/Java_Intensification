@@ -57,7 +57,7 @@ public class Main {
 
 			// Print 5 per line, Example : line 1 = (0,1,2,3,4) , line 2 = (5,6,7,8,9), ...
 			if (((i + 1) % 5) == 0) { // Why i+1 : i ranges form 0 to 19 and prints 5 per line
-				System.out.println("\n"); // If the remainder is 0, pass to the next line
+				System.out.printf("\n"); // If the remainder is 0, pass to the next line
 			}
 		}
 	}
