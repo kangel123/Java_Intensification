@@ -12,5 +12,6 @@ public class MethodTest1 {
 		MethodTest1.iamMethod();	// MethodTest 클래스에서 iamMethod함수 호출
 		iamMethod();	// 현재 클래스(MethodTest) iamMethod 호출
 	}
-
+	
+	
 }
