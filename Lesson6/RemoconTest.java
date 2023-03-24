@@ -2,22 +2,28 @@ package Lesson6;
 
 public class RemoconTest {
 
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		TvRemocon remocon = new TvRemocon();	// TvRemocon 객체 생성
-		for(int i=0;i<10;i++) {
-			remocon.ChannelUp();
+		TvRemocon kopo09_remocon = new TvRemocon(); // TvRemocon의 객체 생성
+
+		System.out.printf("채널 올리기\n");
+		for (int kopo09_i = 0; kopo09_i < 5; kopo09_i++) {	// 5번 반복
+			kopo09_remocon.ChannelUp();	// 채널 올리기
 		}
-		for(int i=0;i<10;i++) {
-			remocon.ChannelDn();
+		
+		System.out.printf("\n채널 내리기\n");
+		for (int kopo09_i = 0; kopo09_i < 5; kopo09_i++) {	// 5번 반복
+			kopo09_remocon.ChannelDn();	// 채널 내리기
 		}
-		for(int i=0;i<5;i++) {
-			remocon.VolUp();
+
+		System.out.printf("\n소리크기 키우기\n");
+		for (int kopo09_i = 0; kopo09_i < 10; kopo09_i++) {		// 10번 반복
+			kopo09_remocon.VolUp();	// 소리 키우기
 		}
-		for(int i=0;i<5;i++) {
-			remocon.VolDn();
+
+		System.out.printf("\n소리크기 줄이기\n");
+		for (int kopo09_i = 0; kopo09_i < 10; kopo09_i++) {	// 10번 반복
+			kopo09_remocon.VolDn();	// 소리 줄이기
 		}
 	}
-
 }

@@ -3,10 +3,8 @@ package Lesson6;
 public class RemoconTestX {
 
 	public static void main(String[] args) {
-		// 2개의 리모콘 생성
-		TvRemoconX remocon1 = new TvRemoconX();
-	
-		remocon1.bCheck();
+		
+		TvRemoconX kopo09_remocon1 = new TvRemoconX();	// 리모콘 생성
+		kopo09_remocon1.bCheck();	// 리모콘 배터리 표시
 	}
-
 }
