@@ -2,32 +2,32 @@ package Lesson7;
 
 public class ArrayTest {
 
-	public static void main(String[] args) {	// ¹è¿­ ³» ÃÖ´ë, ÃÖ¼Ò Ã£±â
-		int[] kopo09_iArray = { 1, 7, 5, 3, 2, 1, 3, 4, 9, 12, 1, 212, 33, 11, 21, 11, 2121, 121, 11, 5, 6, 33 }; // ¹è¿­
+	public static void main(String[] args) {	// ë°°ì—´ ë‚´ ìµœëŒ€, ìµœì†Œ ì°¾ê¸°
+		int[] kopo09_iArray = { 1, 7, 5, 3, 2, 1, 3, 4, 9, 12, 1, 212, 33, 11, 21, 11, 2121, 121, 11, 5, 6, 33 }; // ë°°ì—´
 
-		for (int kopo09_i = 0; kopo09_i < kopo09_iArray.length; kopo09_i++) { // ¹è¿­ÀÇ ¸ğµç ¿ä¼Ò Ãâ·Â
+		for (int kopo09_i = 0; kopo09_i < kopo09_iArray.length; kopo09_i++) { // ë°°ì—´ì˜ ëª¨ë“  ìš”ì†Œ ì¶œë ¥
 			System.out.printf("iArray[%d]=%d\n", kopo09_i, kopo09_iArray[kopo09_i]);
 		}
 
-		int kopo09_iMax = kopo09_iArray[0]; // ÃÖ´ë°ªÀº ÀÏ´Ü 0¹ø ÀÎµ¦½º °ªÀ¸·Î ÃÊ±âÈ­
-		int kopo09_iMaxPt = 0; // ÀÎµ¥½º ¹øÈ£
-		for (int kopo09_i = 0; kopo09_i < kopo09_iArray.length; kopo09_i++) { // ¸ğµç ¹è¿­¿¡ ´ëÇÏ¿©
-			if (kopo09_iMax < kopo09_iArray[kopo09_i]) { // ÇöÀç ÃÖ´ë°ªº¸´Ù Å« °ªÀÌ Á¸ÀçÇÏ¸é
-				kopo09_iMax = kopo09_iArray[kopo09_i]; // ÃÖ´ë°ªÀº ÇØ´ç °ªÀ¸·Î º¯°æÇÏ°í
-				kopo09_iMaxPt = kopo09_i; // ÀÎµ¦½º ¹øÈ£µµ ÇØ´ç ¹øÈ£·Î º¯°æÇÑ´Ù
+		int kopo09_iMax = kopo09_iArray[0]; // ìµœëŒ€ê°’ì€ ì¼ë‹¨ 0ë²ˆ ì¸ë±ìŠ¤ ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
+		int kopo09_iMaxPt = 0; // ì¸ë°ìŠ¤ ë²ˆí˜¸
+		for (int kopo09_i = 0; kopo09_i < kopo09_iArray.length; kopo09_i++) { // ëª¨ë“  ë°°ì—´ì— ëŒ€í•˜ì—¬
+			if (kopo09_iMax < kopo09_iArray[kopo09_i]) { // í˜„ì¬ ìµœëŒ€ê°’ë³´ë‹¤ í° ê°’ì´ ì¡´ì¬í•˜ë©´
+				kopo09_iMax = kopo09_iArray[kopo09_i]; // ìµœëŒ€ê°’ì€ í•´ë‹¹ ê°’ìœ¼ë¡œ ë³€ê²½í•˜ê³ 
+				kopo09_iMaxPt = kopo09_i; // ì¸ë±ìŠ¤ ë²ˆí˜¸ë„ í•´ë‹¹ ë²ˆí˜¸ë¡œ ë³€ê²½í•œë‹¤
 			}
 		}
-		System.out.printf("MAX : iArray[%d]=%d\n", kopo09_iMaxPt, kopo09_iMax); // ÃÖ´ë°ª Ãâ·Â
+		System.out.printf("MAX : iArray[%d]=%d\n", kopo09_iMaxPt, kopo09_iMax); // ìµœëŒ€ê°’ ì¶œë ¥
 
-		int kopo09_iMin = kopo09_iArray[0]; // ÃÖ¼Ò°ªÀº ÀÏ´Ü 0¹ø ÀÎµ¦½º °ªÀ¸·Î ÃÊ±âÈ­
-		int kopo09_iMinPt = 0; // ÀÎµ¥½º ¹øÈ£
-		for (int kopo09_i = 0; kopo09_i < kopo09_iArray.length; kopo09_i++) { // ¸ğµç ¹è¿­¿¡ ´ëÇÏ¿©
-			if (kopo09_iMin > kopo09_iArray[kopo09_i]) { // ÇöÀç ÃÖ¼Ò°ªº¸´Ù ÀÛÀº °ªÀÌ Á¸ÀçÇÏ¸é
-				kopo09_iMin = kopo09_iArray[kopo09_i]; // ÃÖ¼Ò°ªÀº ÇØ´ç °ªÀ¸·Î º¯°æÇÏ°í
-				kopo09_iMinPt = kopo09_i; // ÀÎµ¦½º ¹øÈ£µµ ÇØ´ç ¹øÈ£·Î º¯°æÇÑ´Ù
+		int kopo09_iMin = kopo09_iArray[0]; // ìµœì†Œê°’ì€ ì¼ë‹¨ 0ë²ˆ ì¸ë±ìŠ¤ ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
+		int kopo09_iMinPt = 0; // ì¸ë°ìŠ¤ ë²ˆí˜¸
+		for (int kopo09_i = 0; kopo09_i < kopo09_iArray.length; kopo09_i++) { // ëª¨ë“  ë°°ì—´ì— ëŒ€í•˜ì—¬
+			if (kopo09_iMin > kopo09_iArray[kopo09_i]) { // í˜„ì¬ ìµœì†Œê°’ë³´ë‹¤ ì‘ì€ ê°’ì´ ì¡´ì¬í•˜ë©´
+				kopo09_iMin = kopo09_iArray[kopo09_i]; // ìµœì†Œê°’ì€ í•´ë‹¹ ê°’ìœ¼ë¡œ ë³€ê²½í•˜ê³ 
+				kopo09_iMinPt = kopo09_i; // ì¸ë±ìŠ¤ ë²ˆí˜¸ë„ í•´ë‹¹ ë²ˆí˜¸ë¡œ ë³€ê²½í•œë‹¤
 			}
 		}
-		System.out.printf("Min : iArray[%d]=%d\n", kopo09_iMinPt, kopo09_iMin); // ÃÖ¼Ò°ª Ãâ·Â
+		System.out.printf("Min : iArray[%d]=%d\n", kopo09_iMinPt, kopo09_iMin); // ìµœì†Œê°’ ì¶œë ¥
 	}
 
 }

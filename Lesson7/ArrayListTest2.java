@@ -2,24 +2,24 @@ package Lesson7;
 
 import java.util.ArrayList;
 
-public class ArrayListTest2 {	//¹é¸¸°³ÀÇ ¿ø¼Ò¸¦ °®´Â ¾î·¹ÀÌ¸®½ºÆ®
+public class ArrayListTest2 {	//ë°±ë§Œê°œì˜ ì›ì†Œë¥¼ ê°–ëŠ” ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸
 
 	public static void main(String[] args) {
-		int kopo09_iTestMAX = 1000000;	// ¹é¸¸°³
-		ArrayList<Integer> kopo09_iAL = new ArrayList<>();	// ¾î·¹ÀÌ¸®½ºÆ® °´Ã¼ »ı¼º
+		int kopo09_iTestMAX = 1000000;	// ë°±ë§Œê°œ
+		ArrayList<Integer> kopo09_iAL = new ArrayList<>();	// ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸ ê°ì²´ ìƒì„±
 		
-		for(int kopo09_i=0;kopo09_i<kopo09_iTestMAX;kopo09_i++) {	// ¹é¸¸¹ø µ¿¾È
-			kopo09_iAL.add((int)(Math.random()*1000000));	// 0ºÎÅÍ 999999±îÁö Áß ·£´ıÀ¸·Î ¾î·¹ÀÌ¸®½ºÆ®¿¡ ÀúÀå
+		for(int kopo09_i=0;kopo09_i<kopo09_iTestMAX;kopo09_i++) {	// ë°±ë§Œë²ˆ ë™ì•ˆ
+			kopo09_iAL.add((int)(Math.random()*1000000));	// 0ë¶€í„° 999999ê¹Œì§€ ì¤‘ ëœë¤ìœ¼ë¡œ ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸ì— ì €ì¥
 		}
 		
-		for(int kopo09_i=0;kopo09_i<kopo09_iAL.size();kopo09_i++) {	// ¾î·¹ÀÌ¸®½ºÆ® Å©±â(¹é¸¸¹ø) µ¿¾È
-			System.out.printf(" ArrayList %d = %d\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// °ª Ãâ·Â
+		for(int kopo09_i=0;kopo09_i<kopo09_iAL.size();kopo09_i++) {	// ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸ í¬ê¸°(ë°±ë§Œë²ˆ) ë™ì•ˆ
+			System.out.printf(" ArrayList %d = %d\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// ê°’ ì¶œë ¥
 		}
-		System.out.printf("****************************\n");	// ±¸ºĞ
+		System.out.printf("****************************\n");	// êµ¬ë¶„
 
-		kopo09_iAL.sort(null);		// Á¤·ÄÇÏ±â
-		for(int kopo09_i=0;kopo09_i<kopo09_iAL.size();kopo09_i++) {	// ¾î·¹ÀÌ¸®½ºÆ® Å©±â(¹é¸¸¹ø) µ¿¾È
-			System.out.printf(" ArrayList %d = %d\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// Á¤·ÄµÈ °ª Ãâ·Â
+		kopo09_iAL.sort(null);		// ì •ë ¬í•˜ê¸°
+		for(int kopo09_i=0;kopo09_i<kopo09_iAL.size();kopo09_i++) {	// ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸ í¬ê¸°(ë°±ë§Œë²ˆ) ë™ì•ˆ
+			System.out.printf(" ArrayList %d = %d\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// ì •ë ¬ëœ ê°’ ì¶œë ¥
 		}
 	}
 

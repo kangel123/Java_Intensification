@@ -2,24 +2,24 @@ package Lesson7;
 
 public class OneRec2 {
 	private int kopo09_student_id;	// ID
-	private String kopo09_name; // ÀÌ¸§
-	private int kopo09_kor; // ±¹¾î Á¡¼ö
-	private int kopo09_eng; // ¿µ¾î Á¡¼ö
-	private int kopo09_mat; // ¼öÇĞ Á¡¼ö
+	private String kopo09_name; // ì´ë¦„
+	private int kopo09_kor; // êµ­ì–´ ì ìˆ˜
+	private int kopo09_eng; // ì˜ì–´ ì ìˆ˜
+	private int kopo09_mat; // ìˆ˜í•™ ì ìˆ˜
 
-	OneRec2(int kopo09_student_id, String kopo09_name, int kopo09_kor, int kopo09_eng, int kopo09_mat) { // Æ¯Á¤ »ı¼ºÀÚ »ı¼º
-		this.kopo09_student_id = kopo09_student_id;	// ID ÀúÀå
-		this.kopo09_name = kopo09_name; // ÀÌ¸§ ÀúÀå
-		this.kopo09_kor = kopo09_kor; // ±¹¾î Á¡¼ö ÀúÀå
-		this.kopo09_eng = kopo09_eng; // ¿µ¾î Á¡¼ö ÀúÀå
-		this.kopo09_mat = kopo09_mat; // ¼öÇĞ Á¡¼ö ÀúÀå
+	OneRec2(int kopo09_student_id, String kopo09_name, int kopo09_kor, int kopo09_eng, int kopo09_mat) { // íŠ¹ì • ìƒì„±ì ìƒì„±
+		this.kopo09_student_id = kopo09_student_id;	// ID ì €ì¥
+		this.kopo09_name = kopo09_name; // ì´ë¦„ ì €ì¥
+		this.kopo09_kor = kopo09_kor; // êµ­ì–´ ì ìˆ˜ ì €ì¥
+		this.kopo09_eng = kopo09_eng; // ì˜ì–´ ì ìˆ˜ ì €ì¥
+		this.kopo09_mat = kopo09_mat; // ìˆ˜í•™ ì ìˆ˜ ì €ì¥
 	}
 	
-	public int student_id(){return this.kopo09_student_id;};	// ID ¹İÈ¯
-	public String name(){return this.kopo09_name;};	// ÀÌ¸§ ¹İÈ¯
-	public int kor(){return this.kopo09_kor;};	// ±¹¾î Á¡¼ö ¹İÈ¯
-	public int eng(){return this.kopo09_eng;};	// ¿µ¾î Á¡¼ö ¹İÈ¯
-	public int mat(){return this.kopo09_mat;};	// ¼öÇĞ Á¡¼ö ¹İÈ¯
-	public int sum(){return this.kopo09_kor+this.kopo09_eng+this.kopo09_mat;};	// ÇÕ°è ¹İÈ¯
-	public double ave() {return sum()/3.0;};	// Æò±Õ ¹İÈ¯
+	public int student_id(){return this.kopo09_student_id;};	// ID ë°˜í™˜
+	public String name(){return this.kopo09_name;};	// ì´ë¦„ ë°˜í™˜
+	public int kor(){return this.kopo09_kor;};	// êµ­ì–´ ì ìˆ˜ ë°˜í™˜
+	public int eng(){return this.kopo09_eng;};	// ì˜ì–´ ì ìˆ˜ ë°˜í™˜
+	public int mat(){return this.kopo09_mat;};	// ìˆ˜í•™ ì ìˆ˜ ë°˜í™˜
+	public int sum(){return this.kopo09_kor+this.kopo09_eng+this.kopo09_mat;};	// í•©ê³„ ë°˜í™˜
+	public double ave() {return sum()/3.0;};	// í‰ê·  ë°˜í™˜
 }

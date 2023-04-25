@@ -31,7 +31,7 @@ public class Lec06 {
 
 		String[] kopo09_field_name = kopo09_readtxt.split("\t"); // 필드명을 배열로 저장
 
-		int kopo09_LineCnt = 0; // 줄 개수
+		int kopo09_LineCnt = 1; // 줄 개수
 		while ((kopo09_readtxt = kopo09_br.readLine()) != null) { // readLine()을 사용해 한줄 단위로 kopo09_readtxt에 저장
 																	// 내용이 비었으면 종료
 
@@ -48,36 +48,42 @@ public class Lec06 {
 				System.out.printf("%s : %s\n", kopo09_field_name[28], kopo09_field[28]); // 위도
 				System.out.printf("%s : %s\n", kopo09_field_name[29], kopo09_field[29]); // 경도
 
+				if(kopo09_address.equals("")) {	// 주소가 없는 경우
+					System.out.printf("주소가 없습니다\n"); // 에러 메시지 출력 후
+					break;	// 종료
+				}
+				
 				if (!kopo09_field[28].equals("") && !kopo09_field[29].equals("")) { // 위도와 경도가 있는 경우에만
 					double kopo09_dist = Math.sqrt(Math.pow(Double.parseDouble(kopo09_field[28]) - kopo09_lat, 2)
 							+ Math.pow(Double.parseDouble(kopo09_field[29]) - kopo09_lng, 2)); // 거리 구하기
-
-					System.out.println(kopo09_maxDist);
+				
+					
 					if (kopo09_maxDist < kopo09_dist) { // 먼 거리 구하기
 						kopo09_maxDist = kopo09_dist; // 먼 거리 값 변경
-						kopo09_maxAddress = kopo09_address; // 먼 거리의 주소 변경
+						kopo09_maxAddress = kopo09_address; // 가까운 거리의 주소 변경
 					}
-					System.out.println(kopo09_maxDist);
-					System.out.println(kopo09_maxAddress);
 
 					if (kopo09_minDist > kopo09_dist) { // 가까운 거리 구하기
 						kopo09_minDist = kopo09_dist; // 가까운 거리 값 변경
 						kopo09_minAddress = kopo09_address; // 가까운 거리의 주소 변경
-						System.out.println(kopo09_minAddress);
 					}
 
 					System.out.printf("현재지점과 거리 : %f\n", kopo09_dist); // 거리
 					System.out.printf("**********************************\n"); // 아랫 구분
 				}
-			} catch (Exception e) {
-
+			} catch (Exception e) { // 그 외의 에러가 생겼을 때
+				System.out.printf("%d번째 항목에서 에러가 생겼습니다\n", kopo09_LineCnt); // 에러 메시지 출력 후				
+				break;	// 종료
 			} finally {
 				kopo09_LineCnt++; // 다음 줄 번호
 			}
 		}
 
-		System.out.printf("\n가장 먼 곳 : %s\n", kopo09_minAddress); // 먼 거리의 주소 출력
-		System.out.printf("가장 가까운 곳 : %s\n", kopo09_maxAddress); // 가까운 거리의 주소 출력
+		System.out.printf("\n가장 먼 곳 : %s\n", kopo09_maxAddress); // 먼 거리의 주소 출력
+		System.out.printf("가장 먼 곳 : %f\n", kopo09_maxDist); // 먼 거리 출력
+
+		System.out.printf("가장 가까운 곳 : %s\n", kopo09_minAddress); // 가까운 거리의 주소 출력
+		System.out.printf("가장 가까운 곳 : %f\n", kopo09_minDist); // 가까운 거리 출력
 
 	}
 

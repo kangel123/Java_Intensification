@@ -25,7 +25,7 @@ public class L11 {
 			String code = kopo09_field[2];	// 코드
 			String year = kopo09_field[1].substring(0, 4);	// 년도
 			if (code.equals("A005930") && year.equals("2015")) {	// 삼성전자이고 2015년인 경우				
-				int kopo09_stock = Integer.parseInt(kopo09_field[4]);	// 종가(?)
+				int kopo09_stock = Integer.parseInt(kopo09_field[3]);	// 종가
 				if(kopo09_maxStock < kopo09_stock) {	// 종가 최대값 구하기
 					kopo09_maxStock = kopo09_stock;	// 현재 종가 최대값 변경
 				}

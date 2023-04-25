@@ -1,48 +1,48 @@
 package Lesson7;
 
-public class Han { // ÀÎÄÚµù Ms949
+public class Han { // ì¸ì½”ë”© Ms949
 
 	public static void main(String[] args) {
-		System.out.printf("HanBlankForeword[%s]\n", HanBlackForeword("ÇÑ±Ûabcd", 15));
-		System.out.printf("HanBlankForeword[%s]\n", HanBlackForeword("ÇÑ±ÛÇÑ±Ûaa", 15));
-		System.out.printf("HanBlankBackword[%s]\n", HanBlankBackword("ÇÑ±Ûaa", 15));
-		System.out.printf("HanBlankBackword[%s]\n", HanBlankBackword("ÇÑ±ÛÇÑ±Ûaa", 15));
-		System.out.printf("ÇÑ±ÛÀº [%d]°³\n", HanCount("ÇÑ±ÛÇÑ±Ûaa"));
+		System.out.printf("HanBlankForeword[%s]\n", HanBlackForeword("í•œê¸€abcd", 15));
+		System.out.printf("HanBlankForeword[%s]\n", HanBlackForeword("í•œê¸€í•œê¸€aa", 15));
+		System.out.printf("HanBlankBackword[%s]\n", HanBlankBackword("í•œê¸€aa", 15));
+		System.out.printf("HanBlankBackword[%s]\n", HanBlankBackword("í•œê¸€í•œê¸€aa", 15));
+		System.out.printf("í•œê¸€ì€ [%d]ê°œ\n", HanCount("í•œê¸€í•œê¸€aa"));
 	}
 
-	// ¾Õ¿¡ °ø¹éÀ¸·Î ÁÙ ¸ÂÃß±â
+	// ì•ì— ê³µë°±ìœ¼ë¡œ ì¤„ ë§ì¶”ê¸°
 	public static String HanBlackForeword(String kopo09_word, int kopo09_space) {
-		String kopo09_newWord = "";	// »õ·Î¿î ¹®ÀÚ
-		for (int kopo09_i = 0; kopo09_i < kopo09_space - kopo09_word.getBytes().length; kopo09_i++) {	// ºÎÁ·ÇÑ ¸¸Å­
-			kopo09_newWord += " ";	// °ø¹é Ãß°¡
+		String kopo09_newWord = "";	// ìƒˆë¡œìš´ ë¬¸ì
+		for (int kopo09_i = 0; kopo09_i < kopo09_space - kopo09_word.getBytes().length; kopo09_i++) {	// ë¶€ì¡±í•œ ë§Œí¼
+			kopo09_newWord += " ";	// ê³µë°± ì¶”ê°€
 		}
-		kopo09_newWord += kopo09_word;	// ±âÁ¸ ¹®ÀÚ Ãß°¡
+		kopo09_newWord += kopo09_word;	// ê¸°ì¡´ ë¬¸ì ì¶”ê°€
 
-		return kopo09_newWord;	// »õ·Î¿î ¹®ÀÚ ¹İÈ¯
+		return kopo09_newWord;	// ìƒˆë¡œìš´ ë¬¸ì ë°˜í™˜
 	}
 
-	// µÚ¿¡ °ø¹éÀ¸·Î ÁÙ ¸ÂÃß±â
+	// ë’¤ì— ê³µë°±ìœ¼ë¡œ ì¤„ ë§ì¶”ê¸°
 	public static String HanBlankBackword(String kopo09_word, int kopo09_space) {
-		String kopo09_newWord = kopo09_word;	// »õ·Î¿î ¹®ÀÚ¿¡ ±âÁ¸¹®ÀÚ Ãß°¡
-		for (int kopo09_i = 0; kopo09_i < kopo09_space - kopo09_word.getBytes().length; kopo09_i++) {	// ºÎÁ·ÇÑ ¸¸Å­
-			kopo09_newWord += " ";	// °ø¹é Ãß°¡
+		String kopo09_newWord = kopo09_word;	// ìƒˆë¡œìš´ ë¬¸ìì— ê¸°ì¡´ë¬¸ì ì¶”ê°€
+		for (int kopo09_i = 0; kopo09_i < kopo09_space - kopo09_word.getBytes().length; kopo09_i++) {	// ë¶€ì¡±í•œ ë§Œí¼
+			kopo09_newWord += " ";	// ê³µë°± ì¶”ê°€
 		}
 
-		return kopo09_newWord;	// »õ·Î¿î ¹®ÀÚ ¹İÈ¯
+		return kopo09_newWord;	// ìƒˆë¡œìš´ ë¬¸ì ë°˜í™˜
 	}
 	
-	// ÇÑ±Û ¼¼±â, À¯´ÏÄÚµå »ç¿ë
+	// í•œê¸€ ì„¸ê¸°, ìœ ë‹ˆì½”ë“œ ì‚¬ìš©
 	public static int HanCount(String kopo09_word) {
-		int kopo09_num = 0;	// ÇÑ±Û °³¼ö
-		for (int kopo09_i = 0; kopo09_i < kopo09_word.length(); kopo09_i++) {	// ¸ğµç ¹®ÀÚ¿¡ ´ëÇØ
-			if (44032 <= (int) kopo09_word.charAt(kopo09_i) && (int) kopo09_word.charAt(kopo09_i) <= 55215) { // ÇÑ±ÛÀÌ¸é 
+		int kopo09_num = 0;	// í•œê¸€ ê°œìˆ˜
+		for (int kopo09_i = 0; kopo09_i < kopo09_word.length(); kopo09_i++) {	// ëª¨ë“  ë¬¸ìì— ëŒ€í•´
+			if (44032 <= (int) kopo09_word.charAt(kopo09_i) && (int) kopo09_word.charAt(kopo09_i) <= 55215) { // í•œê¸€ì´ë©´ 
 				kopo09_num++;	// +1
-			} else if (4352 <= (int) kopo09_word.charAt(kopo09_i) && (int) kopo09_word.charAt(kopo09_i) <= 4607) { // ÀÚÀ½¸¸ ÀÖÀ¸¸é 
+			} else if (4352 <= (int) kopo09_word.charAt(kopo09_i) && (int) kopo09_word.charAt(kopo09_i) <= 4607) { // ììŒë§Œ ìˆìœ¼ë©´ 
 				kopo09_num++;	// +1
-			} else if (12592 <= (int) kopo09_word.charAt(kopo09_i) && (int) kopo09_word.charAt(kopo09_i) <= 12687) { // ¸ğÀ½¸¸ ÀÖÀ¸¸é 
+			} else if (12592 <= (int) kopo09_word.charAt(kopo09_i) && (int) kopo09_word.charAt(kopo09_i) <= 12687) { // ëª¨ìŒë§Œ ìˆìœ¼ë©´ 
 				kopo09_num++;	// +1
 			}
 		}
-		return kopo09_num;	// ÇÑ±Û °³¼ö ¹İÈ¯
+		return kopo09_num;	// í•œê¸€ ê°œìˆ˜ ë°˜í™˜
 	}
 }

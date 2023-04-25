@@ -4,47 +4,47 @@ import java.util.ArrayList;
 
 public class ArrayListTest {
 
-	public static void main(String[] args) {	// ¾î·¹ÀÌ¸®½ºÆ® »ç¿ë¹ı
-		ArrayList<String> kopo09_iAL = new ArrayList<>();	// ArrayList °´Ã¼ »ı¼º
+	public static void main(String[] args) {	// ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸ ì‚¬ìš©ë²•
+		ArrayList<String> kopo09_iAL = new ArrayList<>();	// ArrayList ê°ì²´ ìƒì„±
 
-		kopo09_iAL.add("abc");	// 0¹øÂ° ÀÎµ¦½º¿¡ ÀúÀå
-		kopo09_iAL.add("abcd");	// 1¹øÂ° ÀÎµ¦½º¿¡ ÀúÀå
-		kopo09_iAL.add("efga");	// 2¹øÂ° ÀÎµ¦½º¿¡ ÀúÀå
-		kopo09_iAL.add("°¡³ª´Ù0");	// 3¹øÂ° ÀÎµ¦½º¿¡ ÀúÀå
-		kopo09_iAL.add("1234");	// 4¹øÂ° ÀÎµ¦½º¿¡ ÀúÀå
-		kopo09_iAL.add("12rk34");	// 5¹øÂ° ÀÎµ¦½º¿¡ ÀúÀå
-		System.out.printf("****************************\n");	// ArrayList °ª È®ÀÎ ½ÃÀÛ
-		System.out.printf(" ½ÃÀÛ ArraySize %d \n", kopo09_iAL.size()); // ¿ø¼Ò °³¼ö, ¹è¿­ÀÇ length¿Í ºñ½Á
-		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ¸ğµç ¿ø¼Ò¿¡ ´ëÇÏ¿©
-			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_i¹øÂ° ÀÎµ¦½º °ªÀ» Ãâ·Â
+		kopo09_iAL.add("abc");	// 0ë²ˆì§¸ ì¸ë±ìŠ¤ì— ì €ì¥
+		kopo09_iAL.add("abcd");	// 1ë²ˆì§¸ ì¸ë±ìŠ¤ì— ì €ì¥
+		kopo09_iAL.add("efga");	// 2ë²ˆì§¸ ì¸ë±ìŠ¤ì— ì €ì¥
+		kopo09_iAL.add("ê°€ë‚˜ë‹¤0");	// 3ë²ˆì§¸ ì¸ë±ìŠ¤ì— ì €ì¥
+		kopo09_iAL.add("1234");	// 4ë²ˆì§¸ ì¸ë±ìŠ¤ì— ì €ì¥
+		kopo09_iAL.add("12rk34");	// 5ë²ˆì§¸ ì¸ë±ìŠ¤ì— ì €ì¥
+		System.out.printf("****************************\n");	// ArrayList ê°’ í™•ì¸ ì‹œì‘
+		System.out.printf(" ì‹œì‘ ArraySize %d \n", kopo09_iAL.size()); // ì›ì†Œ ê°œìˆ˜, ë°°ì—´ì˜ lengthì™€ ë¹„ìŠ·
+		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ëª¨ë“  ì›ì†Œì— ëŒ€í•˜ì—¬
+			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_ië²ˆì§¸ ì¸ë±ìŠ¤ ê°’ì„ ì¶œë ¥
 		}
 		
-		kopo09_iAL.set(3, "°¡¶ó¶ó¶ó");	// 3¹ø ÀÎµ¦½ºÀÇ °ª º¯°æ
-		System.out.printf("****************************\n");	// ArrayList ³» ¿ø¼Ò°ª º¯°æ È®ÀÎ ½ÃÀÛ
-		System.out.printf(" ³»¿ëº¯°æ ArraySize %d \n", kopo09_iAL.size()); // ¿ø¼Ò °³¼ö, ¹è¿­ÀÇ length¿Í ºñ½Á
-		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ¸ğµç ¿ø¼Ò¿¡ ´ëÇÏ¿©
-			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_i¹øÂ° ÀÎµ¦½º °ªÀ» Ãâ·Â
+		kopo09_iAL.set(3, "ê°€ë¼ë¼ë¼");	// 3ë²ˆ ì¸ë±ìŠ¤ì˜ ê°’ ë³€ê²½
+		System.out.printf("****************************\n");	// ArrayList ë‚´ ì›ì†Œê°’ ë³€ê²½ í™•ì¸ ì‹œì‘
+		System.out.printf(" ë‚´ìš©ë³€ê²½ ArraySize %d \n", kopo09_iAL.size()); // ì›ì†Œ ê°œìˆ˜, ë°°ì—´ì˜ lengthì™€ ë¹„ìŠ·
+		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ëª¨ë“  ì›ì†Œì— ëŒ€í•˜ì—¬
+			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_ië²ˆì§¸ ì¸ë±ìŠ¤ ê°’ì„ ì¶œë ¥
 		}
 		
-		kopo09_iAL.remove(4);	// 4¹ø ÀÎµ¦½º °ª »èÁ¦, µÚ¿¡ ÀÎµ¦½º´Â ¾ÕÀÇ ÀÎµ¦½º·Î ÀÌµ¿(º¯°æ)
-		System.out.printf("****************************\n");	// ArrayList ³» ¿ø¼Ò°ª »èÁ¦ È®ÀÎ ½ÃÀÛ
-		System.out.printf(" ³»¿ëº¯°æ ArraySize %d \n", kopo09_iAL.size()); // ¿ø¼Ò °³¼ö, ¹è¿­ÀÇ length¿Í ºñ½Á
-		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ¸ğµç ¿ø¼Ò¿¡ ´ëÇÏ¿©
-			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_i¹øÂ° ÀÎµ¦½º °ªÀ» Ãâ·Â
+		kopo09_iAL.remove(4);	// 4ë²ˆ ì¸ë±ìŠ¤ ê°’ ì‚­ì œ, ë’¤ì— ì¸ë±ìŠ¤ëŠ” ì•ì˜ ì¸ë±ìŠ¤ë¡œ ì´ë™(ë³€ê²½)
+		System.out.printf("****************************\n");	// ArrayList ë‚´ ì›ì†Œê°’ ì‚­ì œ í™•ì¸ ì‹œì‘
+		System.out.printf(" ë‚´ìš©ë³€ê²½ ArraySize %d \n", kopo09_iAL.size()); // ì›ì†Œ ê°œìˆ˜, ë°°ì—´ì˜ lengthì™€ ë¹„ìŠ·
+		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ëª¨ë“  ì›ì†Œì— ëŒ€í•˜ì—¬
+			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_ië²ˆì§¸ ì¸ë±ìŠ¤ ê°’ì„ ì¶œë ¥
 		}
 		
-		kopo09_iAL.sort(null);	// Á¤·Ä½ÃÅ°´Â ÇÔ¼ö
-		System.out.printf("****************************\n");	// ArrayList Á¤·Ä È®ÀÎ
-		System.out.printf(" ¸®½ºÆ®Sort ArraySize %d \n", kopo09_iAL.size()); // ¿ø¼Ò °³¼ö, ¹è¿­ÀÇ length¿Í ºñ½Á
-		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ¸ğµç ¿ø¼Ò¿¡ ´ëÇÏ¿©
-			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_i¹øÂ° ÀÎµ¦½º °ªÀ» Ãâ·Â
+		kopo09_iAL.sort(null);	// ì •ë ¬ì‹œí‚¤ëŠ” í•¨ìˆ˜
+		System.out.printf("****************************\n");	// ArrayList ì •ë ¬ í™•ì¸
+		System.out.printf(" ë¦¬ìŠ¤íŠ¸Sort ArraySize %d \n", kopo09_iAL.size()); // ì›ì†Œ ê°œìˆ˜, ë°°ì—´ì˜ lengthì™€ ë¹„ìŠ·
+		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ëª¨ë“  ì›ì†Œì— ëŒ€í•˜ì—¬
+			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_ië²ˆì§¸ ì¸ë±ìŠ¤ ê°’ì„ ì¶œë ¥
 		}
 		
-		kopo09_iAL.clear();	// ArrayList »èÁ¦(ÃÊ±âÈ­)
-		System.out.printf("****************************\n");	// ArrayList »èÁ¦ È®ÀÎ
-		System.out.printf(" ÀüºÎ »èÁ¦ ArraySize %d \n", kopo09_iAL.size()); // ¿ø¼Ò °³¼ö, ¹è¿­ÀÇ length¿Í ºñ½Á
-		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ¸ğµç ¿ø¼Ò¿¡ ´ëÇÏ¿©
-			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_i¹øÂ° ÀÎµ¦½º °ªÀ» Ãâ·Â
+		kopo09_iAL.clear();	// ArrayList ì‚­ì œ(ì´ˆê¸°í™”)
+		System.out.printf("****************************\n");	// ArrayList ì‚­ì œ í™•ì¸
+		System.out.printf(" ì „ë¶€ ì‚­ì œ ArraySize %d \n", kopo09_iAL.size()); // ì›ì†Œ ê°œìˆ˜, ë°°ì—´ì˜ lengthì™€ ë¹„ìŠ·
+		for (int kopo09_i = 0; kopo09_i < kopo09_iAL.size(); kopo09_i++) {	// ëª¨ë“  ì›ì†Œì— ëŒ€í•˜ì—¬
+			System.out.printf("ArrayList %d = %s\n", kopo09_i, kopo09_iAL.get(kopo09_i));	// kopo09_ië²ˆì§¸ ì¸ë±ìŠ¤ ê°’ì„ ì¶œë ¥
 		}
 	}
 
